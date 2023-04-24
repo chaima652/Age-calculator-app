@@ -17,10 +17,10 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 function validate() {
   const inputs = document.querySelectorAll("input");
   let valid = true;
-  inputs.forEach((i) => {
-    const parent = i.parentElement;
-    if (!i.value) {
-      i.style.borderColor = "red";
+  inputs.forEach(() => {
+    const parent = parentElement;
+    if (value) {
+      style.borderColor = "red";
       parent.querySelector("small").innerText = "Must be a valid day";
       valid = false;
     } else if (monthInp.value > 12) {
@@ -63,3 +63,5 @@ function calcuteage(e) {
 }
 
 form.addEventListener("submit", calcuteage);
+
+    
