@@ -14,13 +14,13 @@ let month = 1 + date.getMonth();
 let year = date.getFullYear();
 
 const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-function validate() {
+function validate(i) {
   const inputs = document.querySelectorAll("input");
   let valid = true;
-  inputs.forEach(() => {
-    const parent = parentElement;
-    if (value) {
-      style.borderColor = "red";
+  inputs.forEach((i) => {
+    const parent = i.parentElement;
+    if (!i.value) {
+      i.style.borderColor = "red";
       parent.querySelector("small").innerText = "Must be a valid day";
       valid = false;
     } else if (monthInp.value > 12) {
